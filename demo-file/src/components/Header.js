@@ -3,11 +3,23 @@ import React from 'react'
 function Header() {
   const carousel = document.querySelector(".carousel");
 
-  const dragging = (e) => {
-      carousel.scrollLeft = e.pageX;
+  let isDragStart = false;
+  const dragStart = () => {
+    isDragStart = true;
   }
-  
+  const dragging = (e) => {
+    if(!isDragStart) return;
+    e.preventDefault();
+    carousel.scrollLeft = e.pageX;
+  }
+
+  const dragStop = () => {
+    isDragStart = false;
+  }
+  carousel.addEventListener("mousedown", dragStart);
   carousel.addEventListener("mousemove", dragging);
+  carousel.addEventListener("mousemove", dragStop);
+
     function myFunction() {
         document.getElementById('hello').innerHTML="You clicked Me";
         var x = document.getElementById("myDIV");

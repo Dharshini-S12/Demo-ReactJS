@@ -82,6 +82,8 @@ body{
 }
 .wrapper{
   max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
 }
 .wrapper .carousel{
   white-space: nowrap;
@@ -89,9 +91,9 @@ body{
   margin-top: 15px;
 }
 .carousel img{
-  width: calc(100%/3);
-  object-fit: cover;
-  height: 340px;
+  width: calc(100%/4);
+  /*object-fit: cover;*/
+  height: 240px;
 }
 /*.carousel img:first-child{
   margin-left: 0px;
