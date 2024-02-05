@@ -91,9 +91,9 @@ body{
   margin-top: 15px;
 }
 .carousel img{
-  width: calc(100%/4);
+  width: calc(100%/7);
   /*object-fit: cover;*/
-  height: 240px;
+  height: 170px;
 }
 /*.carousel img:first-child{
   margin-left: 0px;
