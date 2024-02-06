@@ -106,11 +106,8 @@ body{
   border-radius: 50%;
   padding: 10px; 
 }*/
-@layer base{
-  body{
-    background-color: black;
-  }
-}
+
+
 
 
 
