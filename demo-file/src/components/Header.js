@@ -20,8 +20,6 @@ const PrevArrow = (props) => {
     />
   );
 };
-
-// Custom arrow component for next button
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
