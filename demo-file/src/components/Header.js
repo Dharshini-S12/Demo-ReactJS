@@ -2,13 +2,51 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", 
+      background: "black",
+      fontSize:"47px",
+      marginTop:"-230px", 
+      marginLeft:"1050px", 
+      borderRadius:"1rem",
+      color:"black",
+      backgroundColor:"url('/images/1.jpg')"
+    }}
+      onClick={onClick}
+    />
+  );
+};
+
+// Custom arrow component for next button
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", 
+      background: "black",
+      fontSize:"47px",
+      marginTop:"-230px", 
+      marginRight:"85px",
+      borderRadius:"1rem"
+    }}
+      onClick={onClick}
+    />
+  );
+};
 function Header() {  
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    prevArrow: <PrevArrow />, 
+    nextArrow: <NextArrow />, 
   };  
   return (
     <div className="w-3/4 m-auto">
@@ -30,6 +68,7 @@ function Header() {
       </div> 
         
     </div>
+    
   )
 }
 
